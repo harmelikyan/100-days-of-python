@@ -40,17 +40,9 @@ while len(guessed_states) < 50:
         correct_answers += 1
 
 
-
-
 def get_mouse_click_coor(x, y):
     print(x, y)
 
 
 turtle.onscreenclick(get_mouse_click_coor)
 turtle.mainloop()
-
-
-
-
-
-
