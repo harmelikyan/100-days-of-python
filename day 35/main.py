@@ -17,21 +17,23 @@ parameters = {
 response = requests.get(OWM_Endpoint, params=parameters)
 response.raise_for_status()
 weather_data = response.json()
+print(weather_data)
 weather_twelve_hours = weather_data["hourly"][:12]
+# print(weather_twelve_hours)
+#
+# will_rain = False
+# for hours in weather_twelve_hours:
+#     condition_code = hours["weather"][0]["id"]
+#     if int(condition_code) > 700:
+#         will_rain = True
 
-will_rain = False
-for hours in weather_twelve_hours:
-    condition_code = hours["weather"][0]["id"]
-    if int(condition_code) > 700:
-        will_rain = True
-
-if will_rain:
-    client = Client(account_sid, auth_token)
-    message = client.messages \
-        .create(
-            body="It's going to rain today. Remember to bring an ☔️",
-            from_="+19087749763",
-            to="+447475309579",
-        )
-
-    print(message.sid)
+# if will_rain:
+#     client = Client(account_sid, auth_token)
+#     message = client.messages \
+#         .create(
+#             body="It's going to rain today. Remember to bring an ☔️",
+#             from_="+19087749763",
+#             to="+447475309579",
+#         )
+#
+#     print(message.sid)
