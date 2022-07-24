@@ -6,8 +6,8 @@ import requests
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
-spotify_id = ''
-spotify_secret = ''
+spotify_id = '4f7bebe01c034abf8dd5287032643025'
+spotify_secret = 'c06f446a6818471cb3aec7784fa113a3'
 
 
 
